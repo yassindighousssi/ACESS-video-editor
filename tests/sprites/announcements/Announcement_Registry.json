@@ -1,0 +1,430 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-28",
+  "description": "Central registry of all expected audio announcements for Test Sprite validation",
+  "errorCodes": {
+    "ERR001": {
+      "message": "Error: Video corrupt — cannot read file.",
+      "trigger": "Import corrupt file",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR002": {
+      "message": "Error: Format not supported. Supported: MP4, MOV, MKV, AVI, WAV, MP3.",
+      "trigger": "Import unsupported format",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR003": {
+      "message": "Error: No media loaded. Import a video first.",
+      "trigger": "Edit operation with no media",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR004": {
+      "message": "Error: Clip not found.",
+      "trigger": "Operate on non-existent clip",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR005": {
+      "message": "Error: Split position out of clip bounds.",
+      "trigger": "Split at invalid position",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR006": {
+      "message": "Error: Cannot split — clip too short (minimum 100ms).",
+      "trigger": "Split on very short clip",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR007": {
+      "message": "Error: No clip selected.",
+      "trigger": "Edit operation without selection",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR008": {
+      "message": "Error: Clipboard empty.",
+      "trigger": "Paste with empty clipboard",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR009": {
+      "message": "Error: Paste position out of project bounds.",
+      "trigger": "Paste at invalid position",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR010": {
+      "message": "Error: Cannot delete last clip. Use 'New Project' instead.",
+      "trigger": "Delete last remaining clip",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR011": {
+      "message": "Error: Merge requires exactly 2 adjacent clips.",
+      "trigger": "Merge with wrong selection",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR012": {
+      "message": "Error: Clips not adjacent — cannot merge.",
+      "trigger": "Merge non-adjacent clips",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR013": {
+      "message": "Error: Cannot undo — history empty.",
+      "trigger": "Undo with no history",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR014": {
+      "message": "Error: Cannot redo — already at latest state.",
+      "trigger": "Redo at end of history",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR015": {
+      "message": "Error: Project file corrupted. Attempting recovery from backup.",
+      "trigger": "Load corrupted project file",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR016": {
+      "message": "Error: Disk full. Project not saved.",
+      "trigger": "Save with insufficient disk space",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR017": {
+      "message": "Error: Export failed. FFmpeg process crashed.",
+      "trigger": "FFmpeg failure during export",
+      "severity": "error",
+      "matchMode": "exact"
+    },
+    "ERR018": {
+      "message": "Error: Plugin '{name}' failed and was disabled.",
+      "trigger": "Plugin throws exception",
+      "severity": "error",
+      "matchMode": "pattern",
+      "variables": {
+        "name": "string"
+      }
+    }
+  },
+  "scenarios": {
+    "IMPORT_SUCCESS_MP4": {
+      "name": "Import valid MP4",
+      "group": "Media Import",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+i",
+          "file": "fixtures/sample_1080p.mp4",
+          "expectedAnnouncement": "Video imported. Duration {duration}. {trackCount} video track(s), {audioCount} audio track(s).",
+          "matchMode": "pattern",
+          "variables": {
+            "duration": "\\d{1,2}:\\d{2}",
+            "trackCount": "\\d+",
+            "audioCount": "\\d+"
+          }
+        }
+      ]
+    },
+    "IMPORT_CORRUPT": {
+      "name": "Import corrupt file",
+      "group": "Media Import",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+i",
+          "file": "fixtures/corrupt.mp4",
+          "expectedAnnouncement": "Error: Video corrupt — cannot read file.",
+          "matchMode": "exact",
+          "errorCode": "ERR001"
+        }
+      ]
+    },
+    "IMPORT_UNSUPPORTED": {
+      "name": "Import unsupported format",
+      "group": "Media Import",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+i",
+          "file": "fixtures/file.bmp",
+          "expectedAnnouncement": "Error: Format not supported. Supported: MP4, MOV, MKV, AVI, WAV, MP3.",
+          "matchMode": "exact",
+          "errorCode": "ERR002"
+        }
+      ]
+    },
+    "SPLIT_CLIP_SUCCESS": {
+      "name": "Split clip at playhead",
+      "group": "Track Operations",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+s",
+          "expectedAnnouncement": "Clip split at {position}. Left segment {leftDuration}, right segment {rightDuration}.",
+          "matchMode": "pattern",
+          "variables": {
+            "position": "\\d{1,2}:\\d{2}\\.\\d{3}",
+            "leftDuration": "\\d{1,2}:\\d{2}",
+            "rightDuration": "\\d{1,2}:\\d{2}"
+          }
+        }
+      ]
+    },
+    "SPLIT_POSITION_INVALID": {
+      "name": "Split at invalid position",
+      "group": "Track Operations",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+s",
+          "file": "fixtures/1_second.mp4",
+          "position": "00:00:02.000",
+          "expectedAnnouncement": "Error: Split position out of clip bounds.",
+          "matchMode": "exact",
+          "errorCode": "ERR005"
+        }
+      ]
+    },
+    "SPLIT_TOO_SHORT": {
+      "name": "Split clip too short",
+      "group": "Track Operations",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+s",
+          "file": "fixtures/100ms.mp4",
+          "expectedAnnouncement": "Error: Cannot split — clip too short (minimum 100ms).",
+          "matchMode": "exact",
+          "errorCode": "ERR006"
+        }
+      ]
+    },
+    "PLAY_PAUSE": {
+      "name": "Play and pause toggle",
+      "group": "Navigation",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "space",
+          "expectedAnnouncement": "Playing from {position}.",
+          "matchMode": "pattern",
+          "variables": { "position": "\\d{1,2}:\\d{2}" }
+        },
+        {
+          "action": "keypress",
+          "key": "space",
+          "expectedAnnouncement": "Paused at {position}.",
+          "matchMode": "pattern",
+          "variables": { "position": "\\d{1,2}:\\d{2}" }
+        }
+      ]
+    },
+    "DELETE_CLIP_CONFIRM": {
+      "name": "Delete clip with confirmation",
+      "group": "Selection & Cut",
+      "priority": "High",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "delete",
+          "expectedAnnouncement": "Confirm: Delete selected clip '{clipName}'? Press Delete again to confirm, Escape to cancel.",
+          "matchMode": "pattern",
+          "variables": { "clipName": ".+" }
+        },
+        {
+          "action": "keypress",
+          "key": "delete",
+          "expectedAnnouncement": "Clip '{clipName}' deleted. Duration now {totalDuration}.",
+          "matchMode": "pattern",
+          "variables": {
+            "clipName": ".+",
+            "totalDuration": "\\d{1,2}:\\d{2}"
+          }
+        }
+      ]
+    },
+    "DELETE_LAST_CLIP": {
+      "name": "Delete last clip (error)",
+      "group": "Selection & Cut",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "delete",
+          "expectedAnnouncement": "Error: Cannot delete last clip. Use 'New Project' instead.",
+          "matchMode": "exact",
+          "errorCode": "ERR010"
+        }
+      ]
+    },
+    "UNDO_SPLIT": {
+      "name": "Undo split operation",
+      "group": "Undo/Redo",
+      "priority": "High",
+      "steps": [
+        { "action": "keypress", "key": "ctrl+s", "setup": true },
+        {
+          "action": "keypress",
+          "key": "ctrl+z",
+          "expectedAnnouncement": "Undo: Split clip. Segments merged back.",
+          "matchMode": "exact"
+        }
+      ]
+    },
+    "REDO_SPLIT": {
+      "name": "Redo split operation",
+      "group": "Undo/Redo",
+      "priority": "High",
+      "steps": [
+        { "action": "keypress", "key": "ctrl+s", "setup": true },
+        { "action": "keypress", "key": "ctrl+z" },
+        {
+          "action": "keypress",
+          "key": "ctrl+y",
+          "expectedAnnouncement": "Redo: Split clip at {position}.",
+          "matchMode": "pattern",
+          "variables": { "position": "\\d{1,2}:\\d{2}" }
+        }
+      ]
+    },
+    "UNDO_EMPTY": {
+      "name": "Undo with empty history",
+      "group": "Undo/Redo",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+z",
+          "expectedAnnouncement": "Error: Cannot undo — history empty.",
+          "matchMode": "exact",
+          "errorCode": "ERR013"
+        }
+      ]
+    },
+    "REDO_EMPTY": {
+      "name": "Redo at end of history",
+      "group": "Undo/Redo",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+y",
+          "expectedAnnouncement": "Error: Cannot redo — already at latest state.",
+          "matchMode": "exact",
+          "errorCode": "ERR014"
+        }
+      ]
+    },
+    "ROOM_SWITCH_CUT": {
+      "name": "Switch to Cut room",
+      "group": "Room System",
+      "priority": "Medium",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+e",
+          "expectedAnnouncement": "Room: Cut. Timeline loaded. {clipCount} clips.",
+          "matchMode": "pattern",
+          "variables": { "clipCount": "\\d+" }
+        }
+      ]
+    },
+    "SAVE_PROJECT": {
+      "name": "Save project",
+      "group": "Project File",
+      "priority": "High",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+s",
+          "expectedAnnouncement": "Project saved. File size: {size}.",
+          "matchMode": "pattern",
+          "variables": { "size": "\\d+\\.?\\d* [KMG]B" }
+        }
+      ]
+    },
+    "NO_CLIP_SELECTED": {
+      "name": "Edit without selection",
+      "group": "Selection & Cut",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+s",
+          "expectedAnnouncement": "Error: No clip selected.",
+          "matchMode": "exact",
+          "errorCode": "ERR007"
+        }
+      ]
+    },
+    "PASTE_EMPTY_CLIPBOARD": {
+      "name": "Paste with empty clipboard",
+      "group": "Selection & Cut",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+v",
+          "expectedAnnouncement": "Error: Clipboard empty.",
+          "matchMode": "exact",
+          "errorCode": "ERR008"
+        }
+      ]
+    },
+    "MERGE_ADJACENT_SUCCESS": {
+      "name": "Merge two adjacent clips",
+      "group": "Track Operations",
+      "priority": "High",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+m",
+          "setup": "select_two_adjacent_clips",
+          "expectedAnnouncement": "Clips merged. New duration: {duration}.",
+          "matchMode": "pattern",
+          "variables": { "duration": "\\d{1,2}:\\d{2}" }
+        }
+      ]
+    },
+    "MERGE_NOT_ADJACENT": {
+      "name": "Merge non-adjacent clips (error)",
+      "group": "Track Operations",
+      "priority": "Critical",
+      "steps": [
+        {
+          "action": "keypress",
+          "key": "ctrl+m",
+          "setup": "select_two_non_adjacent_clips",
+          "expectedAnnouncement": "Error: Clips not adjacent — cannot merge.",
+          "matchMode": "exact",
+          "errorCode": "ERR012"
+        }
+      ]
+    },
+    "UNDO_CHAIN_10": {
+      "name": "Undo chain of 10 steps",
+      "group": "Undo/Redo",
+      "priority": "Medium",
+      "steps": [
+        { "action": "keypress", "key": "ctrl+s", "repeat": 10, "delay": 100 },
+        { "action": "keypress", "key": "ctrl+z", "repeat": 10, "delay": 100, "expectedAnnouncement": "Undo step {step}: {operation}.", "matchMode": "pattern" }
+      ]
+    }
+  }
+}

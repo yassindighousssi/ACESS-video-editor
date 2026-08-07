@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-stt-arabic",
+    "name": "Arabic / العربية",
+    "effectId": "stt",
+    "parameters": { "language": "ar", "confidence": 70 },
+    "description": "تحويل الكلام العربي إلى نص."
+  },
+  {
+    "id": "preset-stt-english",
+    "name": "English / الإنجليزية",
+    "effectId": "stt",
+    "parameters": { "language": "en", "confidence": 70 },
+    "description": "تحويل الكلام الإنجليزي إلى نص."
+  },
+  {
+    "id": "preset-stt-french",
+    "name": "French / الفرنسية",
+    "effectId": "stt",
+    "parameters": { "language": "fr", "confidence": 70 },
+    "description": "تحويل الكلام الفرنسي إلى نص."
+  }
+]

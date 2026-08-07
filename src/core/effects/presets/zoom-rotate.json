@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-zoom-in",
+    "name": "Zoom In / تكبير",
+    "effectId": "zoom-rotate",
+    "parameters": { "zoom": 1.5, "rotate": 0, "panX": 0, "panY": 0 },
+    "description": "تكبير المقطع إلى مرة ونصف."
+  },
+  {
+    "id": "preset-rotate-45",
+    "name": "Rotate / تدوير",
+    "effectId": "zoom-rotate",
+    "parameters": { "zoom": 1.0, "rotate": 45, "panX": 0, "panY": 0 },
+    "description": "تدوير المقطع 45 درجة."
+  },
+  {
+    "id": "preset-slow-pan",
+    "name": "Slow Pan / تحريك بطيء",
+    "effectId": "zoom-rotate",
+    "parameters": { "zoom": 1.2, "rotate": 0, "panX": 50, "panY": 0 },
+    "description": "تكبير مع تحريك أفقي بطيء."
+  }
+]

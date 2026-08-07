@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-subtitle-lower-third",
+    "name": "Lower Third / شريط سفلي",
+    "effectId": "add-subtitles",
+    "parameters": { "text": "الاسم واللقب", "startTime": 0, "duration": 4, "fontSize": 20, "color": "#FFFFFF" },
+    "description": "شريط نصي سفلي يعرض الاسم واللقب."
+  },
+  {
+    "id": "preset-subtitle-title",
+    "name": "Title Card / بطاقة عنوان",
+    "effectId": "add-subtitles",
+    "parameters": { "text": "العنوان", "startTime": 0, "duration": 3, "fontSize": 36, "color": "#FFD700" },
+    "description": "بطاقة عنوان كبيرة بلون ذهبي."
+  },
+  {
+    "id": "preset-subtitle-caption",
+    "name": "Caption / ترجمة",
+    "effectId": "add-subtitles",
+    "parameters": { "text": "الترجمة هنا", "startTime": 0, "duration": 3, "fontSize": 24, "color": "#FFFFFF" },
+    "description": "ترجمة نصية قياسية."
+  }
+]

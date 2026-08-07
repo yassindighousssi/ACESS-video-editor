@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-slow-motion",
+    "name": "Slow Motion / حركة بطيئة",
+    "effectId": "speed-change",
+    "parameters": { "speed": 0.5, "preservePitch": true },
+    "description": "إبطاء المقطع إلى نصف السرعة."
+  },
+  {
+    "id": "preset-fast-forward",
+    "name": "Fast Forward / تسريع",
+    "effectId": "speed-change",
+    "parameters": { "speed": 2.0, "preservePitch": true },
+    "description": "تسريع المقطع إلى ضعف السرعة."
+  },
+  {
+    "id": "preset-time-lapse",
+    "name": "Time-lapse / تصوير متسارع",
+    "effectId": "speed-change",
+    "parameters": { "speed": 4.0, "preservePitch": false },
+    "description": "تسريع المقطع إلى أربعة أضعاف كتصوير زمني."
+  }
+]

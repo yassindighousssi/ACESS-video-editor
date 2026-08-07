@@ -1,0 +1,9 @@
+[
+  {
+    "id": "preset-full-reverse",
+    "name": "Full Reverse / عكس كامل",
+    "effectId": "reverse",
+    "parameters": {},
+    "description": "عكس المقطع بالكامل من النهاية إلى البداية."
+  }
+]
