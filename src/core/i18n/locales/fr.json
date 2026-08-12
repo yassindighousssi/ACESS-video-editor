@@ -1,0 +1,171 @@
+{
+  "app": {
+    "name": "Éditeur vidéo ACESS",
+    "tagline": "Montage vidéo non visuel pour tous",
+    "version": "Version {version}",
+    "copyright": "© 2026 Éditeur vidéo ACESS"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "rename": "Renommer",
+    "confirm": "Confirmer",
+    "retry": "Réessayer",
+    "loading": "Chargement…",
+    "language": "Langue",
+    "select_language": "Choisir une langue",
+    "search": "Rechercher",
+    "not_available": "Indisponible"
+  },
+  "rooms": {
+    "project": { "name": "Salle du projet", "description": "Créer et gérer votre projet" },
+    "media": { "name": "Salle des médias", "description": "Importer et organiser les fichiers médias" },
+    "timeline": { "name": "Salle du montage", "description": "Éditer les clips sur la ligne de temps" },
+    "effects": { "name": "Salle des effets", "description": "Appliquer des effets et des filtres" },
+    "text": { "name": "Salle des textes", "description": "Ajouter des titres et des sous-titres" },
+    "export": { "name": "Salle d'exportation", "description": "Exporter votre vidéo terminée" },
+    "settings": { "name": "Salle des paramètres", "description": "Configurer l'application" },
+    "help": { "name": "Salle d'aide", "description": "Commandes et documentation" }
+  },
+  "elements": {
+    "buttons": {
+      "import_media": "Importer des médias",
+      "play": "Lecture",
+      "pause": "Pause",
+      "stop": "Arrêter",
+      "record": "Enregistrer",
+      "undo": "Annuler",
+      "redo": "Rétablir",
+      "cut": "Couper",
+      "copy": "Copier",
+      "paste": "Coller",
+      "save_project": "Enregistrer le projet",
+      "open_project": "Ouvrir le projet",
+      "new_project": "Nouveau projet",
+      "add_effect": "Ajouter un effet",
+      "remove_effect": "Retirer un effet",
+      "export_video": "Exporter la vidéo",
+      "open_settings": "Ouvrir les paramètres",
+      "open_help": "Ouvrir l'aide",
+      "change_language": "Changer la langue"
+    },
+    "fields": {
+      "project_name": "Nom du projet",
+      "file_path": "Chemin du fichier",
+      "duration": "Durée",
+      "width": "Largeur",
+      "height": "Hauteur",
+      "frame_rate": "Fréquence d'images",
+      "bitrate": "Débit"
+    },
+    "tabs": {
+      "project": "Projet",
+      "media": "Médias",
+      "timeline": "Montage",
+      "effects": "Effets",
+      "text": "Textes",
+      "export": "Exportation"
+    }
+  },
+  "shortcuts": {
+    "cut": "Ctrl+X — Couper le clip sélectionné",
+    "copy": "Ctrl+C — Copier le clip sélectionné",
+    "paste": "Ctrl+V — Coller le clip",
+    "undo": "Ctrl+Z — Annuler la dernière action",
+    "redo": "Ctrl+Y — Rétablir la dernière action",
+    "save": "Ctrl+S — Enregistrer le projet",
+    "export": "Ctrl+E — Exporter la vidéo",
+    "language": "Ctrl+Maj+L — Ouvrir le sélecteur de langue",
+    "help": "F1 — Ouvrir l'aide"
+  },
+  "errors": {
+    "file_not_found": "Fichier introuvable.",
+    "permission_denied": "Accès refusé.",
+    "disk_full": "Disque plein.",
+    "file_corrupt": "Fichier corrompu.",
+    "file_read_error": "Erreur de lecture du fichier.",
+    "file_write_error": "Erreur d'écriture du fichier.",
+    "invalid_path": "Chemin de fichier invalide.",
+    "network_error": "Erreur réseau.",
+    "connection_timeout": "Délai de connexion dépassé.",
+    "operation_failed": "Opération échouée.",
+    "unknown": "Une erreur inconnue s'est produite."
+  },
+  "announcements": {
+    "welcome": "Bienvenue dans {app}. Utilisez les flèches pour naviguer entre les salles et appuyez sur Entrée pour ouvrir une salle.",
+    "project_created": "Nouveau projet créé nommé {name}.",
+    "project_opened": "Projet {name} ouvert.",
+    "project_saved": "Projet {name} enregistré avec succès.",
+    "media_imported": "Média {name} importé avec succès.",
+    "media_deleted": "Média {name} supprimé.",
+    "clip_cut": "Clip {clipId} coupé.",
+    "clip_deleted": "Clip {clipId} supprimé.",
+    "effect_added": "Effet {effect} ajouté.",
+    "effect_removed": "Effet {effect} retiré.",
+    "export_started": "Exportation démarrée.",
+    "export_progress": "Exportation : {percent}%",
+    "export_completed": "Exportation terminée avec succès.",
+    "export_failed": "Échec de l'exportation : {message}",
+    "update_available": "Mise à jour disponible : version {version}. Voulez-vous l'installer maintenant ?",
+    "update_downloading": "Téléchargement de la mise à jour : {percent}%",
+    "update_installed": "Mise à jour installée avec succès. L'application va redémarrer.",
+    "update_error": "Erreur de mise à jour : {message}",
+    "language_changed": "Langue changée en {language}.",
+    "already_in_room": "Vous êtes déjà dans la {room}."
+  },
+  "effects": {
+    "speed": { "name": "Vitesse", "description": "Modifier la vitesse de lecture" },
+    "fade": { "name": "Fondu", "description": "Fondu d'ouverture et de fermeture" },
+    "color": { "name": "Correction des couleurs", "description": "Régler la luminosité, le contraste et la saturation" },
+    "text": { "name": "Texte incrusté", "description": "Afficher du texte sur la vidéo" },
+    "transform": { "name": "Transformation", "description": "Mettre à l'échelle, faire pivoter et positionner la vidéo" },
+    "audio": { "name": "Audio", "description": "Régler le volume et les effets audio" },
+    "generative": { "name": "Génératif", "description": "Effets procéduraux et génératifs" }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "audio_feedback": "Retour audio",
+    "audio_feedback_description": "Lire les annonces à voix haute",
+    "language": "Langue de l'interface",
+    "language_description": "Choisissez la langue de l'interface",
+    "update_channel": "Canal de mise à jour",
+    "update_channel_description": "Mises à jour stables, bêta ou nocturnes",
+    "auto_check_updates": "Vérifier les mises à jour automatiquement",
+    "check_interval": "Intervalle de vérification (minutes)",
+    "dark_mode": "Mode sombre"
+  },
+  "help": {
+    "title": "Aide",
+    "welcome": "Guide interactif",
+    "commands": "Commandes disponibles",
+    "faq": "Foire aux questions"
+  },
+  "export": {
+    "title": "Exportation",
+    "formats": {
+      "mp4": "Vidéo MP4",
+      "webm": "Vidéo WebM",
+      "gif": "GIF animé",
+      "avi": "Vidéo AVI",
+      "mov": "Vidéo MOV"
+    },
+    "quality": {
+      "low": "Faible",
+      "medium": "Moyenne",
+      "high": "Élevée",
+      "custom": "Personnalisée"
+    },
+    "progress": "{percent}%",
+    "select_format": "Choisissez un format d'exportation",
+    "select_quality": "Choisissez un niveau de qualité"
+  },
+  "welcome": {
+    "title": "Bienvenue dans {app}",
+    "message": "L'éditeur vidéo ACESS est un environnement de montage vidéo non visuel. Utilisez le clavier et le retour audio pour éditer vos vidéos."
+  }
+}

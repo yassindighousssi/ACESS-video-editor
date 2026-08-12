@@ -1,0 +1,41 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+module.exports = {
+  transform: {
+    "^.+\\.tsx?$": ["ts-jest", {}],
+  },
+  testEnvironment: "node",
+  roots: ["<rootDir>/src"],
+  testMatch: ["**/*.test.{ts,tsx}"],
+  setupFilesAfterEnv: ["<rootDir>/src/ui/test-setup.ts"],
+  collectCoverageFrom: [
+    "src/core/infrastructure/**/*.ts",
+    "!src/core/infrastructure/**/*.test.ts",
+    "!src/core/infrastructure/**/test/**",
+    "src/core/model/**/*.ts",
+    "!src/core/model/**/*.test.ts",
+    "!src/core/model/test/**",
+    "src/core/effects/**/*.ts",
+    "!src/core/effects/**/*.test.ts",
+    "!src/core/effects/tests/**",
+    "src/core/rooms/**/*.ts",
+    "!src/core/rooms/**/*.test.ts",
+    "src/core/media/**/*.ts",
+    "!src/core/media/**/*.test.ts",
+    "src/core/commands/**/*.ts",
+    "!src/core/commands/**/*.test.ts",
+    "src/core/updates/**/*.ts",
+    "!src/core/updates/**/*.test.ts",
+    "!src/core/updates/tests/**",
+    "src/core/i18n/**/*.ts",
+    "!src/core/i18n/**/*.test.ts",
+    "src/ui/hooks/use-translation.ts",
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 90,
+      lines: 90,
+      statements: 90,
+    },
+  },
+};

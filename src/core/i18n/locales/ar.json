@@ -1,0 +1,171 @@
+{
+  "app": {
+    "name": "محرر الفيديو ACESS",
+    "tagline": "تحرير فيديو غير بصري للجميع",
+    "version": "الإصدار {version}",
+    "copyright": "© 2026 محرر الفيديو ACESS"
+  },
+  "common": {
+    "ok": "موافق",
+    "cancel": "إلغاء",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي",
+    "save": "حفظ",
+    "delete": "حذف",
+    "rename": "إعادة تسمية",
+    "confirm": "تأكيد",
+    "retry": "إعادة المحاولة",
+    "loading": "جارٍ التحميل…",
+    "language": "اللغة",
+    "select_language": "اختر لغة",
+    "search": "بحث",
+    "not_available": "غير متوفر"
+  },
+  "rooms": {
+    "project": { "name": "غرفة المشروع", "description": "إنشاء وإدارة مشروعك" },
+    "media": { "name": "غرفة الوسائط", "description": "استيراد ملفات الوسائط وتنظيمها" },
+    "timeline": { "name": "غرفة المخطط الزمني", "description": "تحرير المقاطع على المخطط الزمني" },
+    "effects": { "name": "غرفة التأثيرات", "description": "تطبيق التأثيرات والفلاتر" },
+    "text": { "name": "غرفة النصوص", "description": "إضافة العناوين والترجمة" },
+    "export": { "name": "غرفة التصدير", "description": "تصدير الفيديو النهائي" },
+    "settings": { "name": "غرفة الإعدادات", "description": "تكوين التطبيق" },
+    "help": { "name": "غرفة المساعدة", "description": "الأوامر والتوثيق" }
+  },
+  "elements": {
+    "buttons": {
+      "import_media": "استيراد وسائط",
+      "play": "تشغيل",
+      "pause": "إيقاف مؤقت",
+      "stop": "إيقاف",
+      "record": "تسجيل",
+      "undo": "تراجع",
+      "redo": "إعادة",
+      "cut": "قص",
+      "copy": "نسخ",
+      "paste": "لصق",
+      "save_project": "حفظ المشروع",
+      "open_project": "فتح مشروع",
+      "new_project": "مشروع جديد",
+      "add_effect": "إضافة تأثير",
+      "remove_effect": "إزالة تأثير",
+      "export_video": "تصدير الفيديو",
+      "open_settings": "فتح الإعدادات",
+      "open_help": "فتح المساعدة",
+      "change_language": "تغيير اللغة"
+    },
+    "fields": {
+      "project_name": "اسم المشروع",
+      "file_path": "مسار الملف",
+      "duration": "المدة",
+      "width": "العرض",
+      "height": "الارتفاع",
+      "frame_rate": "معدل الإطارات",
+      "bitrate": "معدل البت"
+    },
+    "tabs": {
+      "project": "المشروع",
+      "media": "الوسائط",
+      "timeline": "المخطط الزمني",
+      "effects": "التأثيرات",
+      "text": "النصوص",
+      "export": "التصدير"
+    }
+  },
+  "shortcuts": {
+    "cut": "Ctrl+X — قص المقطع المحدد",
+    "copy": "Ctrl+C — نسخ المقطع المحدد",
+    "paste": "Ctrl+V — لصق المقطع",
+    "undo": "Ctrl+Z — تراجع عن آخر إجراء",
+    "redo": "Ctrl+Y — إعادة آخر إجراء",
+    "save": "Ctrl+S — حفظ المشروع",
+    "export": "Ctrl+E — تصدير الفيديو",
+    "language": "Ctrl+Shift+L — فتح محدد اللغة",
+    "help": "F1 — فتح المساعدة"
+  },
+  "errors": {
+    "file_not_found": "الملف غير موجود.",
+    "permission_denied": "صلاحية الوصول مرفوضة.",
+    "disk_full": "القرص ممتلئ.",
+    "file_corrupt": "الملف تالف.",
+    "file_read_error": "خطأ في قراءة الملف.",
+    "file_write_error": "خطأ في كتابة الملف.",
+    "invalid_path": "مسار الملف غير صالح.",
+    "network_error": "خطأ في الشبكة.",
+    "connection_timeout": "انتهت مهلة الاتصال.",
+    "operation_failed": "فشلت العملية.",
+    "unknown": "حدث خطأ غير معروف."
+  },
+  "announcements": {
+    "welcome": "مرحبًا بك في {app}. استخدم مفاتيح الأسهم للتنقل بين الغرف واضغط Enter لفتح غرفة.",
+    "project_created": "تم إنشاء مشروع جديد باسم {name}.",
+    "project_opened": "تم فتح المشروع {name}.",
+    "project_saved": "تم حفظ المشروع {name} بنجاح.",
+    "media_imported": "تم استيراد وسيط {name} بنجاح.",
+    "media_deleted": "تم حذف الوسيط {name}.",
+    "clip_cut": "تم قص المقطع {clipId}.",
+    "clip_deleted": "تم حذف المقطع {clipId}.",
+    "effect_added": "تمت إضافة التأثير {effect}.",
+    "effect_removed": "تمت إزالة التأثير {effect}.",
+    "export_started": "بدأ التصدير.",
+    "export_progress": "جارٍ التصدير: {percent}%",
+    "export_completed": "اكتمل التصدير بنجاح.",
+    "export_failed": "فشل التصدير: {message}",
+    "update_available": "تحديث جديد متاح: الإصدار {version}. هل تريد تثبيته الآن؟",
+    "update_downloading": "تنزيل التحديث: {percent}%",
+    "update_installed": "تم تثبيت التحديث بنجاح. سيتم إعادة تشغيل التطبيق.",
+    "update_error": "حدث خطأ أثناء التحديث: {message}",
+    "language_changed": "تم تغيير اللغة إلى {language}.",
+    "already_in_room": "أنت بالفعل في {room}."
+  },
+  "effects": {
+    "speed": { "name": "السرعة", "description": "تغيير سرعة التشغيل" },
+    "fade": { "name": "التلاشي", "description": "التلاشي للداخل والخارج" },
+    "color": { "name": "تصحيح الألوان", "description": "ضبط السطوع والتباين والتشبع" },
+    "text": { "name": "تراكب النص", "description": "عرض نص فوق الفيديو" },
+    "transform": { "name": "التحويل", "description": "تحريك وتدوير وتغيير حجم الفيديو" },
+    "audio": { "name": "الصوت", "description": "ضبط مستوى الصوت والتأثيرات الصوتية" },
+    "generative": { "name": "التوليدية", "description": "تأثيرات إجرائية وتوليدية" }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "audio_feedback": "التغذية الصوتية",
+    "audio_feedback_description": "قراءة الإعلانات بصوت عالٍ",
+    "language": "لغة الواجهة",
+    "language_description": "اختر لغة الواجهة",
+    "update_channel": "قناة التحديث",
+    "update_channel_description": "تحديثات مستقرة أو تجريبية أو ليلية",
+    "auto_check_updates": "التحقق من التحديثات تلقائيًا",
+    "check_interval": "الفاصل الزمني للتحقق (بالدقائق)",
+    "dark_mode": "الوضع الداكن"
+  },
+  "help": {
+    "title": "المساعدة",
+    "welcome": "الدليل التفاعلي",
+    "commands": "الأوامر المتاحة",
+    "faq": "الأسئلة الشائعة"
+  },
+  "export": {
+    "title": "التصدير",
+    "formats": {
+      "mp4": "فيديو MP4",
+      "webm": "فيديو WebM",
+      "gif": "GIF متحرك",
+      "avi": "فيديو AVI",
+      "mov": "فيديو MOV"
+    },
+    "quality": {
+      "low": "منخفض",
+      "medium": "متوسط",
+      "high": "عالٍ",
+      "custom": "مخصص"
+    },
+    "progress": "{percent}%",
+    "select_format": "اختر صيغة التصدير",
+    "select_quality": "اختر مستوى الجودة"
+  },
+  "welcome": {
+    "title": "مرحبًا بك في {app}",
+    "message": "محرر الفيديو ACESS هو بيئة تحرير فيديو غير بصرية. استخدم لوحة المفاتيح والتغذية الصوتية لتحرير مقاطع الفيديو."
+  }
+}

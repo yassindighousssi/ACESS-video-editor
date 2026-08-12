@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-warm",
+    "name": "Warm / دافئ",
+    "effectId": "color-adjust",
+    "parameters": { "brightness": 5, "contrast": 0, "saturation": 10, "hue": 0 },
+    "description": "ألوان دافئة بإضاءة وتشبّع خفيف."
+  },
+  {
+    "id": "preset-cool",
+    "name": "Cool / بارد",
+    "effectId": "color-adjust",
+    "parameters": { "brightness": -5, "contrast": 0, "saturation": 0, "hue": 15 },
+    "description": "ألوان باردة بإزاحة لون خفيفة."
+  },
+  {
+    "id": "preset-vivid",
+    "name": "Vivid / نابض",
+    "effectId": "color-adjust",
+    "parameters": { "brightness": 0, "contrast": 10, "saturation": 25, "hue": 0 },
+    "description": "ألوان نابضة بتباين وتشبّع أعلى."
+  }
+]

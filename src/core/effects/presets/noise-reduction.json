@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-noise-light",
+    "name": "Light / خفيف",
+    "effectId": "noise-reduction",
+    "parameters": { "strength": 30, "sensitivity": 40 },
+    "description": "تقليل ضوضاء خفيف."
+  },
+  {
+    "id": "preset-noise-medium",
+    "name": "Medium / متوسط",
+    "effectId": "noise-reduction",
+    "parameters": { "strength": 50, "sensitivity": 50 },
+    "description": "تقليل ضوضاء متوسط."
+  },
+  {
+    "id": "preset-noise-strong",
+    "name": "Strong / قوي",
+    "effectId": "noise-reduction",
+    "parameters": { "strength": 75, "sensitivity": 60 },
+    "description": "تقليل ضوضاء قوي."
+  }
+]

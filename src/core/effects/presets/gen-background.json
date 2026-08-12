@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-bg-gradient",
+    "name": "Gradient / متدرج",
+    "effectId": "gen-background",
+    "parameters": { "style": "gradient", "colors": "#000000,#FFFFFF", "speed": 20 },
+    "description": "خلفية متدرجة سوداء إلى بيضاء."
+  },
+  {
+    "id": "preset-bg-particles",
+    "name": "Particles / جزيئات",
+    "effectId": "gen-background",
+    "parameters": { "style": "particles", "colors": "#1A1A2E,#E94560", "speed": 40 },
+    "description": "خلفية جزيئات متحركة بألوان داكنة."
+  },
+  {
+    "id": "preset-bg-stars",
+    "name": "Stars / نجوم",
+    "effectId": "gen-background",
+    "parameters": { "style": "stars", "colors": "#0B0B1A,#FFFFFF", "speed": 10 },
+    "description": "خلفية سماء مليئة بالنجوم."
+  }
+]

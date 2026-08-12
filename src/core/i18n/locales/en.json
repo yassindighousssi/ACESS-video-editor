@@ -1,0 +1,171 @@
+{
+  "app": {
+    "name": "ACESS Video Editor",
+    "tagline": "Non-visual video editing for everyone",
+    "version": "Version {version}",
+    "copyright": "© 2026 ACESS Video Editor"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "delete": "Delete",
+    "rename": "Rename",
+    "confirm": "Confirm",
+    "retry": "Retry",
+    "loading": "Loading…",
+    "language": "Language",
+    "select_language": "Select a language",
+    "search": "Search",
+    "not_available": "Not available"
+  },
+  "rooms": {
+    "project": { "name": "Project Room", "description": "Create and manage your project" },
+    "media": { "name": "Media Room", "description": "Import and organize media files" },
+    "timeline": { "name": "Timeline Room", "description": "Edit clips on the timeline" },
+    "effects": { "name": "Effects Room", "description": "Apply effects and filters" },
+    "text": { "name": "Text Room", "description": "Add titles and captions" },
+    "export": { "name": "Export Room", "description": "Export your finished video" },
+    "settings": { "name": "Settings Room", "description": "Configure the application" },
+    "help": { "name": "Help Room", "description": "Commands and documentation" }
+  },
+  "elements": {
+    "buttons": {
+      "import_media": "Import media",
+      "play": "Play",
+      "pause": "Pause",
+      "stop": "Stop",
+      "record": "Record",
+      "undo": "Undo",
+      "redo": "Redo",
+      "cut": "Cut",
+      "copy": "Copy",
+      "paste": "Paste",
+      "save_project": "Save project",
+      "open_project": "Open project",
+      "new_project": "New project",
+      "add_effect": "Add effect",
+      "remove_effect": "Remove effect",
+      "export_video": "Export video",
+      "open_settings": "Open settings",
+      "open_help": "Open help",
+      "change_language": "Change language"
+    },
+    "fields": {
+      "project_name": "Project name",
+      "file_path": "File path",
+      "duration": "Duration",
+      "width": "Width",
+      "height": "Height",
+      "frame_rate": "Frame rate",
+      "bitrate": "Bitrate"
+    },
+    "tabs": {
+      "project": "Project",
+      "media": "Media",
+      "timeline": "Timeline",
+      "effects": "Effects",
+      "text": "Text",
+      "export": "Export"
+    }
+  },
+  "shortcuts": {
+    "cut": "Ctrl+X — Cut the selected clip",
+    "copy": "Ctrl+C — Copy the selected clip",
+    "paste": "Ctrl+V — Paste the clip",
+    "undo": "Ctrl+Z — Undo the last action",
+    "redo": "Ctrl+Y — Redo the last action",
+    "save": "Ctrl+S — Save the project",
+    "export": "Ctrl+E — Export the video",
+    "language": "Ctrl+Shift+L — Open the language selector",
+    "help": "F1 — Open help"
+  },
+  "errors": {
+    "file_not_found": "File not found.",
+    "permission_denied": "Access permission denied.",
+    "disk_full": "Disk is full.",
+    "file_corrupt": "File is corrupted.",
+    "file_read_error": "Error reading the file.",
+    "file_write_error": "Error writing the file.",
+    "invalid_path": "Invalid file path.",
+    "network_error": "Network error.",
+    "connection_timeout": "Connection timed out.",
+    "operation_failed": "Operation failed.",
+    "unknown": "An unknown error occurred."
+  },
+  "announcements": {
+    "welcome": "Welcome to {app}. Use the arrow keys to move between rooms and press Enter to open a room.",
+    "project_created": "Created a new project named {name}.",
+    "project_opened": "Opened project {name}.",
+    "project_saved": "Project {name} saved successfully.",
+    "media_imported": "Imported media {name} successfully.",
+    "media_deleted": "Deleted media {name}.",
+    "clip_cut": "Cut clip {clipId}.",
+    "clip_deleted": "Deleted clip {clipId}.",
+    "effect_added": "Added effect {effect}.",
+    "effect_removed": "Removed effect {effect}.",
+    "export_started": "Export started.",
+    "export_progress": "Exporting: {percent}%",
+    "export_completed": "Export completed successfully.",
+    "export_failed": "Export failed: {message}",
+    "update_available": "Update available: version {version}. Do you want to install it now?",
+    "update_downloading": "Downloading update: {percent}%",
+    "update_installed": "Update installed successfully. The app will restart.",
+    "update_error": "Update error: {message}",
+    "language_changed": "Language changed to {language}.",
+    "already_in_room": "You are already in the {room}."
+  },
+  "effects": {
+    "speed": { "name": "Speed", "description": "Change the playback speed" },
+    "fade": { "name": "Fade", "description": "Fade in and out" },
+    "color": { "name": "Color correction", "description": "Adjust brightness, contrast and saturation" },
+    "text": { "name": "Text overlay", "description": "Display text over the video" },
+    "transform": { "name": "Transform", "description": "Scale, rotate and position the video" },
+    "audio": { "name": "Audio", "description": "Adjust volume and audio effects" },
+    "generative": { "name": "Generative", "description": "Procedural and generative effects" }
+  },
+  "settings": {
+    "title": "Settings",
+    "audio_feedback": "Audio feedback",
+    "audio_feedback_description": "Read announcements aloud",
+    "language": "Interface language",
+    "language_description": "Choose the language of the interface",
+    "update_channel": "Update channel",
+    "update_channel_description": "Stable, beta or nightly updates",
+    "auto_check_updates": "Check for updates automatically",
+    "check_interval": "Check interval (minutes)",
+    "dark_mode": "Dark mode"
+  },
+  "help": {
+    "title": "Help",
+    "welcome": "Interactive guide",
+    "commands": "Available commands",
+    "faq": "Frequently asked questions"
+  },
+  "export": {
+    "title": "Export",
+    "formats": {
+      "mp4": "MP4 video",
+      "webm": "WebM video",
+      "gif": "Animated GIF",
+      "avi": "AVI video",
+      "mov": "MOV video"
+    },
+    "quality": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "custom": "Custom"
+    },
+    "progress": "{percent}%",
+    "select_format": "Select an export format",
+    "select_quality": "Select a quality level"
+  },
+  "welcome": {
+    "title": "Welcome to {app}",
+    "message": "ACESS Video Editor is a non-visual video editing environment. Use the keyboard and audio feedback to edit your videos."
+  }
+}

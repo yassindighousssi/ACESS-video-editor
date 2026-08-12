@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-fade-in",
+    "name": "Fade In / ظهور",
+    "effectId": "fade",
+    "parameters": { "fadeType": "in", "duration": 1, "curve": "ease-in" },
+    "description": "تلاشي ظهور خلال ثانية واحدة."
+  },
+  {
+    "id": "preset-fade-out",
+    "name": "Fade Out / اختفاء",
+    "effectId": "fade",
+    "parameters": { "fadeType": "out", "duration": 1, "curve": "ease-out" },
+    "description": "تلاشي اختفاء خلال ثانية واحدة."
+  },
+  {
+    "id": "preset-fade-both",
+    "name": "Fade Both / ظهور واختفاء",
+    "effectId": "fade",
+    "parameters": { "fadeType": "both", "duration": 1.5, "curve": "linear" },
+    "description": "تلاشي ظهور واختفاء خلال ثانية ونصف."
+  }
+]

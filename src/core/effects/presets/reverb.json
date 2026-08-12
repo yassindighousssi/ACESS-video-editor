@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-reverb-room",
+    "name": "Room / غرفة",
+    "effectId": "reverb",
+    "parameters": { "roomSize": 0.5, "wetLevel": 30, "dryLevel": 100 },
+    "description": "صدى مساحة صغيرة كالغرفة."
+  },
+  {
+    "id": "preset-reverb-hall",
+    "name": "Hall / قاعة",
+    "effectId": "reverb",
+    "parameters": { "roomSize": 0.8, "wetLevel": 50, "dryLevel": 90 },
+    "description": "صدى مساحة كبيرة كالقاعة."
+  },
+  {
+    "id": "preset-reverb-cathedral",
+    "name": "Cathedral / كاتدرائية",
+    "effectId": "reverb",
+    "parameters": { "roomSize": 1.0, "wetLevel": 70, "dryLevel": 80 },
+    "description": "صدى واسع كالكاتدرائية."
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "preset-transition-dissolve",
+    "name": "Dissolve / ذوبان",
+    "effectId": "transition",
+    "parameters": { "transitionType": "dissolve", "duration": 1, "direction": "forward" },
+    "description": "انتقال ذوبان خلال ثانية واحدة."
+  },
+  {
+    "id": "preset-transition-wipe",
+    "name": "Wipe / مسح",
+    "effectId": "transition",
+    "parameters": { "transitionType": "wipe", "duration": 1, "direction": "forward" },
+    "description": "انتقال مسح خلال ثانية واحدة."
+  },
+  {
+    "id": "preset-transition-slide",
+    "name": "Slide / انزلاق",
+    "effectId": "transition",
+    "parameters": { "transitionType": "slide", "duration": 0.5, "direction": "forward" },
+    "description": "انتقال انزلاق خلال نصف ثانية."
+  }
+]

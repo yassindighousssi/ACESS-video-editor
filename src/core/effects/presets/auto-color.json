@@ -1,0 +1,16 @@
+[
+  {
+    "id": "preset-auto-fix",
+    "name": "Auto Fix / إصلاح تلقائي",
+    "effectId": "auto-color",
+    "parameters": { "strength": 80, "whiteBalance": true },
+    "description": "تصحيح تلقائي قياسي مع توازن الأبيض."
+  },
+  {
+    "id": "preset-strong-fix",
+    "name": "Strong Fix / تصحيح قوي",
+    "effectId": "auto-color",
+    "parameters": { "strength": 100, "whiteBalance": true },
+    "description": "تصحيح تلقائي أقوى."
+  }
+]
