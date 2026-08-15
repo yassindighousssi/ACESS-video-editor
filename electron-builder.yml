@@ -1,0 +1,37 @@
+appId: com.yassindighousssi.accessvideoeditor
+productName: "ACESS Video Editor"
+copyright: "Copyright © 2026 Yassin Dighoussi"
+directories:
+  output: release
+  buildResources: assets
+files:
+  - dist-electron/**/*
+  - dist-renderer/**/*
+asar: true
+compression: normal
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icon.ico
+  executableName: "ACESS-Video-Editor"
+  requestedExecutionLevel: asInvoker
+nsis:
+  oneClick: true
+  perMachine: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: "ACESS Video Editor"
+  artifactName: "ACESS-Video-Editor-Setup-${version}.exe"
+  deleteAppDataOnUninstall: false
+portable:
+  artifactName: "ACESS-Video-Editor-${version}-Portable.exe"
+publish:
+  provider: github
+  owner: yassindighousssi
+  repo: ACESS-video-editor

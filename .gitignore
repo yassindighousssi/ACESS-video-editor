@@ -1,6 +1,11 @@
 node_modules/
 dist/
+dist-electron/
+dist-renderer/
+release/
 coverage/
+ACESS-*.exe
+*.blockmap
 *.log
 *.tsbuildinfo
 .env

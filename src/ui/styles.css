@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Tahoma", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app header {
+  padding: 0.75rem 1.25rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #38bdf8;
+  letter-spacing: 0.02em;
+}
+
+section[aria-label] {
+  flex: 1;
+  padding: 1.25rem;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section[aria-label] h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #f8fafc;
+}
+
+section[aria-label] div[role="group"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section[aria-label] button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+section[aria-label] button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+section[aria-label] kbd {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: #0b1120;
+  border: 1px solid #475569;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+section[aria-label] div[role="status"] {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.announcements {
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #0b1120;
+  border: 1px solid #334155;
+  font-size: 0.875rem;
+  color: #7dd3fc;
+}
