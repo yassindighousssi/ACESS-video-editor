@@ -7,8 +7,12 @@ directories:
 files:
   - dist-electron/**/*
   - dist-renderer/**/*
+  - "!node_modules/**/*"
+  - "!package-lock.json"
+  - "!*.md"
+afterPack: scripts/after-pack.js
 asar: true
-compression: normal
+compression: maximum
 win:
   target:
     - target: portable
